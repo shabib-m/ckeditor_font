@@ -33,10 +33,7 @@ function ckeditor_font_ckeditor_plugins() {
 function ckeditor_font_plugin_check($format, $plugin_name) {
   return TRUE;
 }
-function ckeditor_font_ckeditor_settings_alter(&$settings, $format) {
-//    $settings['fontSize_sizes'] = '16/16px;24/24px;48/48px;';
-$settings['fontSize_defaultLabel'] = '12px';
-$settings['font_defaultLabel'] = 'Arial';
-//    $settings['styles'] = 'font-size';
-//    $settings['fontClasses'] = array('font1', 'font2', 'font3', 'font4', 'font5');
-}
+// function ckeditor_font_ckeditor_settings_alter(&$settings, $format) {
+// $settings['fontSize_defaultLabel'] = '12px';
+// $settings['font_defaultLabel'] = 'Arial';
+// }
