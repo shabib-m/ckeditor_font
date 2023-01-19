@@ -7,7 +7,7 @@ Requirements
 ------------
 
 CKEditor module
-This module was tested with CKEditor 4.1.
+This module was tested with CKEditor 4.18.
 
 Install
 -------
