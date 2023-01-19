@@ -1,0 +1,9 @@
+name = CKEditor font
+description = CKEditor plugin for adding font.
+package = User interface
+backdrop = 1.x
+type = module
+
+; stylesheets[all][] = css/ckeditor-indent.css
+
+

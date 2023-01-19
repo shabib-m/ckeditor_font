@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Registering CKEditor plugin.
+ */
+
+/**
+ * Implements hook_ckeditor_plugins().
+ */
+function ckeditor_font_ckeditor_plugins() {
+  $path = backdrop_get_path('module', 'ckeditor_font') . '/plugins';
+  $plugins['font'] = array(
+    'file' => 'plugin.js',
+    'path' => $path ,
+    'css' => array(backdrop_get_path('module', 'ckeditor_font') . '/css/ckeditor-font.css'),
+    'enabled callback' => 'ckeditor_font_plugin_check',
+    'buttons' => array(
+      'Font' => array(
+        'label' => 'Font Families',
+        'image_alternative' => '<span class="ckeditor-button-dropdown">' . t('Font Families') . '<span class="ckeditor-button-arrow"></span></span>',
+      ),
+      'FontSize' => array(
+        'label' => 'Font Size',
+        'image_alternative' => '<span class="ckeditor-button-dropdown">' . t('Font Size') . '<span class="ckeditor-button-arrow"></span></span>',
+      ),
+    ),
+  );
+
+  return $plugins;
+}
+
+function ckeditor_font_plugin_check($format, $plugin_name) {
+  return TRUE;
+}
+function ckeditor_font_ckeditor_settings_alter(&$settings, $format) {
+//    $settings['fontSize_sizes'] = '16/16px;24/24px;48/48px;';
+$settings['fontSize_defaultLabel'] = '12px';
+$settings['font_defaultLabel'] = 'Arial';
+//    $settings['styles'] = 'font-size';
+//    $settings['fontClasses'] = array('font1', 'font2', 'font3', 'font4', 'font5');
+}
