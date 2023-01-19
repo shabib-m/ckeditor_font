@@ -13,7 +13,7 @@ function ckeditor_font_ckeditor_plugins() {
   $plugins['font'] = array(
     'file' => 'plugin.js',
     'path' => $path ,
-    'css' => array(backdrop_get_path('module', 'ckeditor_font') . '/css/ckeditor-font.css'),
+    // 'css' => array(backdrop_get_path('module', 'ckeditor_font') . '/css/ckeditor-font.css'),
     'enabled callback' => 'ckeditor_font_plugin_check',
     'buttons' => array(
       'Font' => array(
